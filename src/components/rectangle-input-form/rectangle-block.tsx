@@ -54,7 +54,7 @@ export const RectangleBlock = ({
             <RectangleInput
               position="top"
               rectangleNumber={rectangleNumber}
-              value={value?.top ? value.top : null}
+              value={value?.top || value?.top === 0 ? value.top : null}
               setValue={(val) => setValue({ ...value, top: val })}
             />
           </div>
@@ -63,7 +63,7 @@ export const RectangleBlock = ({
           <RectangleInput
             position="left"
             rectangleNumber={rectangleNumber}
-            value={value?.left ? value.left : null}
+            value={value?.left || value?.left === 0 ? value.left : null}
             setValue={(val) => setValue({ ...value, left: val })}
           />
         </div>
@@ -72,7 +72,7 @@ export const RectangleBlock = ({
           <RectangleInput
             position="right"
             rectangleNumber={rectangleNumber}
-            value={value?.right ? value.right : null}
+            value={value?.right || value?.right === 0 ? value.right : null}
             setValue={(val) => setValue({ ...value, right: val })}
           />
         </div>
@@ -81,7 +81,7 @@ export const RectangleBlock = ({
             <RectangleInput
               position="bottom"
               rectangleNumber={rectangleNumber}
-              value={value?.bottom ? value.bottom : null}
+              value={value?.bottom || value?.bottom === 0 ? value.bottom : null}
               setValue={(val) => setValue({ ...value, bottom: val })}
             />
           </div>
